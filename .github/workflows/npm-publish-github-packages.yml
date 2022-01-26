@@ -14,6 +14,7 @@ jobs:
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
+      - run: npm install --prefix ./sample-packages/npm/ --folder ./sample-packages/npm/
       - run: npm ci --prefix ./sample-packages/npm/ --folder ./sample-packages/npm/
       - run: npm publish --prefix ./sample-packages/npm/ --folder ./sample-packages/npm/
         env:
