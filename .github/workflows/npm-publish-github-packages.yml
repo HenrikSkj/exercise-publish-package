@@ -13,10 +13,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: npm install
-        env:
-          prefix: ./sample-packages/npm/
-          folder: ./sample-packages/npm/
+      - run: npm install --prefix ./sample-packages/npm/ --folder ./sample-packages/npm/
       - run: npm ci
         env:
           prefix: ./sample-packages/npm/
