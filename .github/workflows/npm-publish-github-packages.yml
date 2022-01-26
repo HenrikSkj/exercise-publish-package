@@ -15,13 +15,13 @@ jobs:
           node-version: 12
       - run: npm install
         env:
-          folder: ./sample-packages/npm/
+          prefix: ./sample-packages/npm/
       - run: npm ci
         env:
-          folder: ./sample-packages/npm/
+          prefix: ./sample-packages/npm/
       - run: npm test
         env:
-          folder: ./sample-packages/npm/
+          prefix: ./sample-packages/npm/
 
   publish-gpr:
     needs: build
