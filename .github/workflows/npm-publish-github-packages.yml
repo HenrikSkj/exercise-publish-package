@@ -13,6 +13,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
+          registry-url: 'https://registry.npmjs.org/hs-sample-package'
       - run: npm install --prefix ./sample-packages/npm/ --folder ./sample-packages/npm/
       - run: npm ci --prefix ./sample-packages/npm/ --folder ./sample-packages/npm/
       - run: npm publish --prefix ./sample-packages/npm/ --folder ./sample-packages/npm/
